@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .grid {
+            width: 75%;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .grid div {
+            background-color: cyan;
+            height: 100px;
+            text-align: center;
+            font-size: 29px;
+            padding: 2rem;
+            color: cyan;
+            transition: 0.2s all ease-in;
+        }
+
+        .grid div.reversed {
+            color: black
+        }
+
+        .grid div.completed {
+            background: radial-gradient(red, transparent);
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
